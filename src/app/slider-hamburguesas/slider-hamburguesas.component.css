@@ -1,0 +1,406 @@
+#hamburguesas {
+  background-image: url("/assets/fondo-hamburguesa.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+}
+.super-container {
+  height: 100%;
+  width: 100%;
+}
+.menu-hamburguesa {
+  width: 85%;
+  display: block;
+  margin: auto;
+  padding-top: 40px;
+}
+.container-slider1 {
+  margin-top: -30px;
+}
+.item-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 34px;
+  padding: 11px;
+  width: 350px;
+  height: 350px;
+}
+.item-slider h6 {
+  color: white;
+  font-size: 18px;
+}
+.item-slider button {
+  display: block;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  width: 110px;
+  border: 2px solid #7f0222;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.img-slider {
+  max-width: 100%;
+  height: 80%;
+
+}
+/*modal*/
+.modal-producto {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all ease-in 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body {
+  width: 303px;
+  height: auto;
+  
+  border-radius: 45px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Asegúrate de que el contenido no se desborde del contenedor */
+  background-color: transparent; /* Hacer el fondo transparente para que se vea la imagen de fondo */
+}
+.tabla {
+  position: absolute; /* Para posicionarlo detrás de otros elementos */
+  filter: blur(2px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Asegúrate de que la imagen cubra todo el div */
+  background-position: center; /* Centra la imagen en el div */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  z-index: -1; /* Asegúrate de que esté detrás de otros elementos en el modal */
+}
+.card-producto{
+  background: rgba(128, 128, 128, 0.2); 
+ 
+}
+.descripcion-hamburguesa h6 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  margin: 0px auto 7px auto;
+}
+.btn-cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: white;
+}
+.modal-body h3 {
+  color: white;
+}
+.descripcion-hamburguesa h3 {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+.name-hamburguesa {
+  margin: auto;
+  text-align: center;
+}
+
+.descripcion-hamburguesa {
+  margin: auto;
+}
+.descripcion-hamburguesa ul {
+  width: 70%;
+  margin: auto;
+}
+
+.descripcion-hamburguesa ul li {
+  list-style: disc;
+  color: #ffffff;
+}
+.descripcion-hamburguesa ul li p {
+  color: black;
+  font-size: 14px;
+}
+.descripcion-hamburguesa a {
+  background-color: #7f0222;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  width: 150px;
+  padding: 7px;
+  margin: 12px auto;
+}
+.img-title {
+  display: block;
+  margin: 0px auto 0px auto;
+  max-width: 54%;
+}
+
+/*modal*/
+
+@media (min-width: 767px) {
+  #hamburguesas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  .super-container {
+    height: 100%;
+    width: 100%;
+  }
+  .menu-hamburguesa {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .container-slider1 {
+    margin-top: -50px;
+  }
+  .item-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 440px;
+    height: 440px;
+  }
+  .item-slider h6 {
+    color: white;
+    font-size: 18px;
+  }
+  .item-slider button {
+    display: block;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    width: 110px;
+    border: 2px solid #7f0222;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .img-slider {
+    max-width: 90%;
+    height: 80%;
+
+  }
+  /*modal*/
+
+  .modal-body {
+    height: auto;
+    width: 400px;
+    border-radius: 45px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .card-producto {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+    background: rgba(128, 128, 128, 0.2); 
+    gap: 0px;
+  }
+
+  .letras-modal {
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .descripcion-hamburguesa ul li p {
+    color: black;
+    font-size: 16px;
+  }
+  .descripcion-hamburguesa ul {
+    width: 50%;
+    margin: auto;
+  }
+  .descripcion-hamburguesa a {
+    margin: 20px auto;
+  }
+  .img-title {
+    display: block;
+    margin: 0px auto 0px auto;
+    max-width: 50%;
+  }
+
+  /*modal*/
+}
+@media (min-width: 1024px) {
+  #hamburguesas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+  }
+  .super-container {
+    height: 100%;
+    width: 100%;
+  }
+  .menu-hamburguesa {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .container-slider1 {
+    margin-top: -50px;
+  }
+  .item-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 49px;
+    width: 470px;
+    height: 470px;
+  }
+  .item-slider h6 {
+    color: white;
+    font-size: 18px;
+  }
+  .item-slider button {
+    display: block;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    width: 110px;
+    border: 2px solid #7f0222;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .img-slider {
+    max-width: 100%;
+    height: 80%;
+  }
+  /*modal*/
+
+  .modal-body {
+   width: 30%; 
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tabla {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+    filter: blur(2px);
+}
+  .card-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(128, 128, 128, 0.2); 
+  }
+  .card-image {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .card-image h3 {
+    text-align: center;
+  }
+  .name-hamburguesa {
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 50px;
+  }
+  .descripcion-hamburguesa {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .letras-modal {
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .descripcion-hamburguesa ul li p {
+    color: black;
+    font-size: 20px;
+  }
+  .descripcion-hamburguesa ul {
+    width: 50%;
+    margin: auto;
+  }
+  .descripcion-hamburguesa a {
+    margin: 20px auto;
+  }
+
+  /*modal*/
+}
+
+@media (min-width: 1200px) {
+  #hamburguesas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  #hamburguesas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+  }
+  .modal-body {
+   
+    border-radius: 45px;
+  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .img-slider {
+    max-width: 100%;
+    height: 80%;
+    padding: 0px 40px;
+    width: 400px;
+  }
+}

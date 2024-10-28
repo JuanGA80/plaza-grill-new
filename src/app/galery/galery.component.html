@@ -1,0 +1,46 @@
+<div class="galery" id="promociones">
+  <h2>Experiencia Plaza Grill</h2>
+  <div class="container-galery">
+    <div class="item-galery" *ngFor="let data of Images; let i = index">
+      <img
+        (click)="onPreviewImage(i)"
+        src="assets/{{ data.imageSrc }}"
+        alt=""
+      />
+    </div>
+    <div class="lightbox" *ngIf="showMask" animation2>
+      <span *ngIf="showCount" class="count"
+        >{{ currentIndex + 1 }}/{{ totalImageCount }}</span
+      >
+      <button class="close-btn" *ngIf="previewImage" (click)="onClosePreview()">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+      <button
+        class="btn-lightbox-carousel btn-prev"
+        *ngIf="controls"
+        (click)="prev()"
+      >
+        <i
+          class="fas fa-arrow-circle-left icon-lightbox-carousel icon-prev"
+        ></i>
+      </button>
+      <button
+        class="btn-lightbox-carousel btn-next"
+        *ngIf="controls"
+        (click)="next()"
+      >
+        <i
+          class="fas fa-arrow-circle-right icon-lightbox-carousel icon-next"
+        ></i>
+      </button>
+      <div
+        *ngIf="previewImage"
+        [@animation]="{ value: 'visible' }"
+        (@animation.done)="onAnimationEnd($event)"
+        class="lightbox-img"
+      >
+        <img src="assets/{{ currentLigthboxImage.imageSrc }}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

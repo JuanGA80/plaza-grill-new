@@ -1,0 +1,25 @@
+body {
+  position: relative;
+}
+
+.btn-flotante {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+  z-index: 99;
+}
+
+.btn-flotante .btn-flotante-img {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+}
+
+@media (min-width: 767px) {
+  
+  .btn-flotante .btn-flotante-img {
+    width: 100px;
+    height: 100px;
+  }
+
+}

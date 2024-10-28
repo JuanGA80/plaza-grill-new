@@ -1,0 +1,300 @@
+#alitas {
+  background-image: url("/assets/fondo-alitas.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+
+}
+.super-container3 {
+  height: 100%;
+  width: 100%;
+}
+.menu-alitas {
+  width: 85%;
+  display: block;
+  margin: auto;
+  padding-top: 40px;
+}
+.container-slider3 {
+  margin-top: -30px;
+}
+.item-slider3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 350px;
+  height: 350px;
+}
+.item-slider3 h6 {
+  color: white;
+  font-size: 18px;
+}
+.item-slider3 button {
+  display: block;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  width: 110px;
+  border: 2px solid #7f0222;
+  padding: 5px;
+  font-size: 16px;
+}
+.img-slider-alita {
+  max-width: 100%;
+  height: 80%;
+}
+.img-alitas {
+  display: block;
+  max-width: 80%;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  text-align: center;
+}
+/*modal*/
+.modal-producto {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all ease-in 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body {
+  width: 90%;
+  height: 80%;
+  background-color: #F7D04E;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.descripcion-hamburguesa h6 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0px auto 7px auto;
+}
+.btn-cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: white;
+}
+.modal-body h3 {
+  color: white;
+}
+
+.name-hamburguesa {
+  margin: auto;
+  text-align: center;
+}
+.letras-modal {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.descripcion-hamburguesa {
+  margin: auto;
+}
+.descripcion-hamburguesa ul {
+  width: 70%;
+  margin: auto;
+}
+
+.descripcion-hamburguesa ul li {
+  list-style: disc;
+  color: #7f0222;
+}
+.descripcion-hamburguesa ul li p {
+  color: black;
+  font-size: 14px;
+}
+.descripcion-hamburguesa a {
+  background-color: #7f0222;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  width: 150px;
+  padding: 7px;
+  margin: 12px auto;
+}
+.img-title {
+  display: block;
+  margin: 0px auto 7px auto;
+}
+.title-alita {
+  text-align: center;
+  color: #7f0222;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+/*modal*/
+
+@media (min-width: 767px) {
+  #alitas {
+    background-image: url("/assets/fondo-alitas.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  .super-container3 {
+    height: 100%;
+    width: 100%;
+  }
+  .menu-alitas {
+    width: 45%;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+  }
+  .container-slider3 {
+    margin-top: -10px;
+  }
+  .item-slider3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 58px;
+    width: 450px;
+    height: 450px;
+  }
+  .item-slider3 h6 {
+    color: white;
+    font-size: 18px;
+  }
+  .item-slider3 button {
+    display: block;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    width: 110px;
+    border: 2px solid #7f0222;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .img-slider-alita {
+    max-width: 100%;
+    height: 80%;
+  }
+  /*modal*/
+
+  .modal-body {
+    width: 60%;
+    height: 68%;
+    background-color: #F7D04E;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* .card-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  } */
+  .card-image {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .name-hamburguesa {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-bottom: 50px;
+  }
+  .descripcion-hamburguesa {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .letras-modal {
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .descripcion-hamburguesa ul li p {
+    color: black;
+    font-size: 16px;
+  }
+  .descripcion-hamburguesa ul {
+    width: 100%;
+    margin: auto;
+  }
+  .descripcion-hamburguesa a {
+    margin: 20px auto;
+  }
+  .img-title {
+    display: block;
+    margin: 0px auto 7px auto;
+  }
+  .img-alitas {
+    display: block;
+    max-width: 70%;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    text-align: center;
+  }
+
+  /*modal*/
+}
+@media (width: 768px) {
+  #alitas {
+    height: 65vh;
+  }
+}
+@media (min-width: 1024px) {
+  #alitas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+  }
+  .modal-body {
+    width: 40%;
+    height: 650px;
+    background-color: #F7D04E;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}
+@media (min-width: 1400px) {
+  #alitas {
+    background-image: url("/assets/fondo-hamburguesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    height: auto;
+
+  }
+}

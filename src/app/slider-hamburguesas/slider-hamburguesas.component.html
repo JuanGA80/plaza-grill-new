@@ -1,0 +1,61 @@
+<div class="container-slider-menu" id="hamburguesas">
+  <div class="super-container">
+    <img src="assets/texto-hamburguesas.png" alt="" class="menu-hamburguesa" />
+    <div class="container-slider1">
+      <swiper-container
+        class="mySwiper"
+        effect="coverflow"
+        grab-cursor="true"
+        centered-slides="true"
+        slides-per-view="auto"
+        coverflow-effect-rotate="0"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="300"
+        coverflow-effect-modifier="2"
+        coverflow-effect-slide-shadows="false"
+      >
+        <swiper-slide
+          class="item-slider"
+          *ngFor="let info of Hamburguesa; let i = index"
+        >
+          <img src="{{ info.foto }}" alt="" class="img-slider" />
+          <h6>{{ info.title }}</h6>
+          <button (click)="openModal(i)">Saber más</button>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div
+      class="modal-producto"
+      *ngIf="modalSwitch && indexPosition == currentModalHamburguesa.id"
+      animation3
+    >
+      <i class="fa-solid fa-xmark btn-cerrar-modal" (click)="cerrarModal()"></i>
+      <div
+        class="modal-body"
+        [@animation]="{ value: 'visible' }"
+        (@animation.done)="onAnimationFinal($event)"
+      >
+          <div  class="tabla" [ngStyle]="{ 'background-image': 'url(' + currentModalHamburguesa.tabla + ')' }"></div>
+        <div class="card-producto">
+         
+          <div class="descripcion-hamburguesa">
+            <h3>{{ currentModalHamburguesa.title }}</h3>
+            <img
+              src="{{ currentModalHamburguesa.imgTitle }}"
+              alt=""
+              class="img-title"
+            />
+            <h6>Ingredientes</h6>
+            <ul
+              *ngFor="let ingrediente of currentModalHamburguesa.ingredientes"
+            >
+              <li>{{ ingrediente }}</li>
+            </ul>
+            <a href="#">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

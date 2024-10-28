@@ -1,0 +1,82 @@
+<div class="container-slider-menu-3" id="cervezas">
+  <div class="super-container2">
+    <img
+      src="assets/texto-cervezas-internacionales.png"
+      alt=""
+      class="menu-cerveza"
+    />
+    <div class="container-slider2">
+      <swiper-container
+        class="mySwiper"
+        effect="coverflow"
+        grab-cursor="true"
+        centered-slides="true"
+        slides-per-view="auto"
+        coverflow-effect-rotate="0"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="350"
+        coverflow-effect-modifier="1"
+        coverflow-effect-slide-shadows="false"
+      >
+        <swiper-slide
+          class="item-slider2"
+          *ngFor="let texto of Cerveza; let i = index"
+        >
+          <img src="{{ texto.picture }}" alt="" class="img-slider-cerveza" />
+          <h6 class="title-cerveza">{{ texto.title }}</h6>
+          <button (click)="openModalCervezas(i)">Saber más</button>
+        </swiper-slide>
+      </swiper-container>
+      <div
+        class="modal-producto"
+        *ngIf="modalCerveza && indexCerveza == currentModalCerveza.id"
+      >
+        <i
+          class="fa-solid fa-xmark btn-cerrar-modal"
+          (click)="cerrarModalCerveza()"
+        ></i>
+        <div class="modal-body">
+          <div  class="bandera" [ngStyle]="{ 'background-image': 'url(' + currentModalCerveza.bandera + ')' }"></div>
+          <div class="card-producto">
+            <div class="card-image">
+              <img
+                src="{{ currentModalCerveza.picture }}"
+                alt=""
+                class="img-modal-cerveza"
+              />
+            </div>
+
+            <div class="descripcion-hamburguesa">
+              <h6 class="title-cerveza-modal">
+                {{ currentModalCerveza.title }}
+              </h6>
+              <!-- <p class="nacionalidad">
+                País: {{ currentModalCerveza.nacionalidad }}
+              </p>
+              <img
+                src="{{ currentModalCerveza.bandera }}"
+                alt=""
+                class="bandera"
+              /> -->
+
+              <ul>
+                <li>
+                  <p>Cantidad: {{ currentModalCerveza.cantidad }}</p>
+                </li>
+                <li>
+                  <p>Estilo: {{ currentModalCerveza.estilo }}</p>
+                </li>
+                <li>
+                  <p>
+                    Grados: {{ currentModalCerveza.grados }}° grados de alcohol
+                  </p>
+                </li>
+              </ul>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
